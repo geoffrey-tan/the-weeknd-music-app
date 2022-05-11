@@ -17,7 +17,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'simple-import-sort'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -36,5 +36,7 @@ module.exports = {
   ],
   rules: {
     'react/jsx-props-no-spreading': 'off',
+    'simple-import-sort/exports': 'error',
+    'simple-import-sort/imports': 'error',
   },
 }

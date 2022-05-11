@@ -16,7 +16,7 @@
     "cz": "cz",
     "eject": "react-scripts eject",
     "lint": "npm run typecheck && npm run lint:es && npm run lint:format",
-    "lint:es": "eslint --fix --ignore-pattern .",
+    "lint:es": "eslint --fix .",
     "lint:format": "prettier --write --loglevel warn . '!**/package-lock.json'",
     "test": "react-scripts test",
     "typecheck": "tsc --noEmit",
@@ -55,6 +55,7 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.5.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
     "prettier": "2.6.2"
   },
   "engines": {
