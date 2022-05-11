@@ -34,6 +34,7 @@
     "@types/react-dom": "18.0.3",
     "grommet": "2.23.0",
     "grommet-icons": "4.7.0",
+    "normalize.css": "8.0.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-router-dom": "6.3.0",
