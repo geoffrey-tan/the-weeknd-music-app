@@ -34,5 +34,7 @@ module.exports = {
       extends: ['plugin:react/jsx-runtime', 'prettier'],
     },
   ],
-  rules: {},
+  rules: {
+    'react/jsx-props-no-spreading': 'off',
+  },
 }
