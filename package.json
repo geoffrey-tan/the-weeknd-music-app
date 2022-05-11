@@ -28,10 +28,6 @@
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.2.0",
     "@testing-library/user-event": "14.1.1",
-    "@types/jest": "27.5.0",
-    "@types/node": "17.0.32",
-    "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.3",
     "grommet": "2.23.0",
     "grommet-icons": "4.7.0",
     "normalize.css": "8.0.1",
@@ -44,6 +40,10 @@
     "web-vitals": "2.1.4"
   },
   "devDependencies": {
+    "@types/jest": "27.5.0",
+    "@types/node": "17.0.32",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.3",
     "@typescript-eslint/eslint-plugin": "5.23.0",
     "@typescript-eslint/parser": "5.23.0",
     "commitizen": "4.2.4",
