@@ -18,6 +18,7 @@
     "lint": "npm run typecheck && npm run lint:es && npm run lint:format",
     "lint:es": "eslint --fix .",
     "lint:format": "prettier --write --loglevel warn . '!**/package-lock.json'",
+    "serve": "npx http-server build/",
     "test": "react-scripts test",
     "typecheck": "tsc --noEmit",
     "update": "npx npm-check-updates --target minor --interactive && npm i",
