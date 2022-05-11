@@ -1,9 +1,15 @@
+import styled from 'styled-components'
+
+const Container = styled.main`
+  padding: 1em;
+`
+
 type AppProps = {
   children?: React.ReactNode
 }
 
 function App(props: AppProps) {
-  return <div {...props} />
+  return <Container {...props} />
 }
 
 App.defaultProps = {

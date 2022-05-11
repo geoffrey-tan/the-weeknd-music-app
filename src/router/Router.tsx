@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+import IndexPage from '../pages'
 import DetailPage from '../pages/detail'
-import OverviewPage from '../pages/overview'
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<OverviewPage />} />
+        <Route path="/" element={<IndexPage />} />
         <Route path="/detail" element={<DetailPage />} />
       </Routes>
     </BrowserRouter>
