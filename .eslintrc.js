@@ -31,7 +31,7 @@ module.exports = {
     },
     {
       files: ['**/*'],
-      extends: ['prettier'],
+      extends: ['plugin:react/jsx-runtime', 'prettier'],
     },
   ],
   rules: {},
