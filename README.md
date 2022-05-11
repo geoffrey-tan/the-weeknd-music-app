@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# The Weekend Music App &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## :star: Quick Start
+
+```shell
+npm install
+```
+
+```shell
+npm start
+```
+
+## :nail_care: Format and Linting
+
+```shell
+npm run lint
+```
+
+_OR_
+
+**Format and lint on save (VS Code)**
+
+```shell
+code --install-extension EditorConfig.EditorConfig dbaeumer.vscode-eslint stylelint.vscode-stylelint esbenp.prettier-vscode
+```
 
 ## Available Scripts
 
