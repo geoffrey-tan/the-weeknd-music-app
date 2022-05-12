@@ -8,6 +8,7 @@ module.exports = {
     'react-app/jest',
     'plugin:react/recommended',
     'airbnb',
+    'airbnb/hooks',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
