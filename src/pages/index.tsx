@@ -2,6 +2,7 @@ import { Grid, ResponsiveContext } from 'grommet'
 import { useContext, useEffect, useState } from 'react'
 
 import { getTopAlbums } from '../api/client'
+import Heading from '../common/Heading'
 import AlbumCard from '../components/AlbumCard'
 
 export type AlbumImage = {
@@ -15,6 +16,7 @@ type Album = {
 }
 
 function Albums({ albums }: { albums: Array<Album> }) {
+  // eslint-disable-next-line no-console
   // console.log('data', albums)
 
   return (
@@ -42,7 +44,7 @@ function IndexPage() {
 
   return (
     <div>
-      <h1>The Weeknd Top Albums</h1>
+      <Heading>The Weeknd Top Albums</Heading>
       <Grid columns={size !== 'small' ? 'small' : '100%'} gap="small">
         {albums && <Albums albums={albums} />}
       </Grid>

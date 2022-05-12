@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## :star: Quick Start
 
+Add `.env` file to root, with API key:
+
+```
+API_KEY=<Last.fm API Key>
+```
+
 ```shell
 npm install
 ```
@@ -27,7 +33,7 @@ _OR_
 **Format and lint on save (VS Code)**
 
 ```shell
-code --install-extension EditorConfig.EditorConfig dbaeumer.vscode-eslint stylelint.vscode-stylelint esbenp.prettier-vscode
+code --install-extension EditorConfig.EditorConfig dbaeumer.vscode-eslint esbenp.prettier-vscode
 ```
 
 ## Available Scripts

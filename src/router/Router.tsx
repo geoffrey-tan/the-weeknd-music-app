@@ -8,7 +8,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<IndexPage />} />
-        <Route path="/detail" element={<DetailPage />} />
+        <Route path="/album/:id" element={<DetailPage />} />
       </Routes>
     </BrowserRouter>
   )

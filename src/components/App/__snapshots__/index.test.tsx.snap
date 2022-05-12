@@ -2,8 +2,8 @@
 
 exports[`App renders 1`] = `
 <div>
-  <div>
-    App
-  </div>
+  <main
+    class="sc-bczRLJ iPOHhG"
+  />
 </div>
 `;
