@@ -1,19 +1,14 @@
-const ARTIST_MBID = 'c8b03190-306c-4120-bb0b-6f2ebfc06ea9' // The Weeknd
-const BASE_URL = `https://ws.audioscrobbler.com/2.0/?mbid=${ARTIST_MBID}&api_key=${process.env.REACT_APP_API_KEY}&format=json`
+const BASE_URL = `https://ws.audioscrobbler.com/2.0/?api_key=${process.env.REACT_APP_API_KEY}&format=json`
 
-type Method = 'artist.gettopalbums'
+type Method = 'album.getInfo' | 'artist.gettopalbums'
 
-const client = async (method: Method) => {
-  const response = await fetch(`${BASE_URL}&method=${method}`)
+const client = async (method: Method, mbid?: string) => {
+  const url = `${BASE_URL}&method=${method}${mbid ? `&mbid=${mbid}` : ''}`
+  const response = await fetch(url)
   const json = await response.json()
+  // console.log(json)
 
   return json
 }
 
-const getTopAlbums = () => {
-  const method = 'artist.gettopalbums'
-  return client(method)
-}
-
-export { getTopAlbums }
 export default client

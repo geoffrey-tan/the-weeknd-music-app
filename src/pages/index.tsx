@@ -1,7 +1,7 @@
 import { Grid, ResponsiveContext } from 'grommet'
 import { useContext, useEffect, useState } from 'react'
 
-import { getTopAlbums } from '../api/client'
+import { getTopAlbums } from '../api/Albums'
 import Heading from '../common/Heading'
 import AlbumCard from '../components/AlbumCard'
 
@@ -13,6 +13,7 @@ export type AlbumImage = {
 type Album = {
   name: string
   image: Array<AlbumImage>
+  mbid: string
 }
 
 function Albums({ albums }: { albums: Array<Album> }) {
@@ -21,8 +22,8 @@ function Albums({ albums }: { albums: Array<Album> }) {
 
   return (
     <>
-      {albums.map(({ name, image }) => (
-        <AlbumCard key={name} name={name} imageUrls={image} />
+      {albums.map(({ name, image, mbid }) => (
+        <AlbumCard key={name} name={name} imageUrls={image} mbid={mbid} />
       ))}
     </>
   )
