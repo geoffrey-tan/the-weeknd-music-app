@@ -3,11 +3,21 @@ import styled from 'styled-components'
 const Container = styled.main`
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  padding: 1em;
 
   a {
     color: #000;
     text-decoration: none;
+  }
+
+  padding: 2em;
+
+  /** @breakpoints https://v2.grommet.io/responsivecontext */
+  @media (min-width: 768px) {
+    padding: 2em 10em;
+  }
+
+  @media (min-width: 1536px) {
+    padding: 2em 20em;
   }
 `
 
