@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom'
 
 import DetailPage from './detail'
 
-describe('App', () => {
+describe('DetailPage', () => {
   it('renders', () => {
     const { container } = render(
       <MemoryRouter

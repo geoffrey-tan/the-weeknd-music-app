@@ -5,7 +5,7 @@ import IndexPage from '.'
 
 jest.mock('../api/Albums')
 
-describe('App', () => {
+describe('IndexPage', () => {
   it('renders', async () => {
     const { container } = render(
       <MemoryRouter initialEntries={['/']}>
