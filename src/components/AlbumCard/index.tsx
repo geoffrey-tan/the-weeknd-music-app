@@ -2,7 +2,7 @@ import { Button, Card, CardFooter, CardHeader, Image, Text } from 'grommet'
 import { Favorite } from 'grommet-icons'
 import { Link } from 'react-router-dom'
 
-import type { AlbumImage } from '../../pages'
+import { AlbumImage } from '../../api/Albums'
 
 type AlbumCardProps = {
   name: string

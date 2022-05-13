@@ -1,22 +1,11 @@
 import { Grid, ResponsiveContext } from 'grommet'
 import { useContext, useEffect, useState } from 'react'
 
-import { getTopAlbums } from '../api/Albums'
+import { getTopAlbums, TopAlbum } from '../api/Albums'
 import Heading from '../common/Heading'
 import AlbumCard from '../components/AlbumCard'
 
-export type AlbumImage = {
-  '#text': string
-  size: 'small' | 'medium' | 'large' | 'extralarge'
-}
-
-type Album = {
-  name: string
-  image: Array<AlbumImage>
-  mbid: string
-}
-
-function Albums({ albums }: { albums: Array<Album> }) {
+function Albums({ albums }: { albums: Array<TopAlbum> }) {
   // eslint-disable-next-line no-console
   // console.log('data', albums)
 
@@ -30,7 +19,7 @@ function Albums({ albums }: { albums: Array<Album> }) {
 }
 
 function IndexPage() {
-  const [albums, setAlbums] = useState<Array<Album> | null>(null)
+  const [albums, setAlbums] = useState<Array<TopAlbum> | null>(null)
   const size = useContext(ResponsiveContext)
 
   useEffect(() => {
