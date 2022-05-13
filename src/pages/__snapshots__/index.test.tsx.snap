@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders 1`] = `
+<div>
+  <h1
+    class="sc-bczRLJ kIOTIl"
+  >
+    Drake Top Albums
+  </h1>
+  <div
+    class="StyledGrid-sc-1wofa1l-0 eUExhg"
+  >
+    <a
+      href="/album/id/album-name"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 cXtuaV"
+      >
+        <img
+          alt="Album Name"
+          class="StyledImage-sc-ey4zx9-0 gnCBdf"
+          src=""
+        />
+        <header
+          class="StyledBox-sc-13pk1d4-0 GpGnb"
+        >
+          <span
+            class="StyledText-sc-1sadyjn-0 jFErBe"
+          >
+            Album Name
+          </span>
+        </header>
+        <footer
+          class="StyledBox-sc-13pk1d4-0 kVEeTz"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 btzCnY"
+            type="button"
+          >
+            <svg
+              aria-label="Favorite"
+              class="StyledIcon-sc-ofa7kd-0 gHuuOp"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M1 8.4C1 4 4.5 3 6.5 3 9 3 11 5 12 6.5 13 5 15 3 17.5 3c2 0 5.5 1 5.5 5.4C23 15 12 21 12 21S1 15 1 8.4z"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </footer>
+      </div>
+    </a>
+  </div>
+</div>
+`;
