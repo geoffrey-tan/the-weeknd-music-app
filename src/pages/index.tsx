@@ -40,7 +40,7 @@ function IndexPage() {
 
   return (
     <div>
-      <Heading>The Weeknd Top Albums</Heading>
+      <Heading>Drake Top Albums</Heading>
       <Grid columns={size !== 'small' ? 'small' : '100%'} gap="small">
         {albums ? <Albums albums={albums} /> : <Spinner />}
       </Grid>
