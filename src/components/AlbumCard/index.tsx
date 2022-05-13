@@ -3,18 +3,21 @@ import { Favorite } from 'grommet-icons'
 import { Link } from 'react-router-dom'
 
 import { AlbumImage } from '../../api/Albums'
+import getSlug from '../../lib/getSlug'
 
 function Anchor({
   mbid,
   url,
+  name,
   children,
 }: {
   mbid: string
   url: string
+  name: string
   children: React.ReactNode
 }) {
   return mbid ? (
-    <Link to={`album/${mbid}`}>{children}</Link>
+    <Link to={`album/${mbid}/${getSlug(name)}`}>{children}</Link>
   ) : (
     <a href={url} target="_blank" rel="noopener noreferrer">
       {children}
@@ -31,7 +34,7 @@ type AlbumCardProps = {
 
 function AlbumCard({ name, imageUrls, mbid, url }: AlbumCardProps) {
   return (
-    <Anchor mbid={mbid} url={url}>
+    <Anchor mbid={mbid} url={url} name={name}>
       <Card height="small" width="medium" background="light-1">
         <Image fit="cover" src={imageUrls[3]['#text']} alt={name} />
         <CardHeader pad="medium">
