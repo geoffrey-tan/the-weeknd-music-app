@@ -1,4 +1,4 @@
-import { Grid, ResponsiveContext } from 'grommet'
+import { Grid, ResponsiveContext, Spinner } from 'grommet'
 import { useContext, useEffect, useState } from 'react'
 
 import { getTopAlbums, TopAlbum } from '../api/Albums'
@@ -42,7 +42,7 @@ function IndexPage() {
     <div>
       <Heading>The Weeknd Top Albums</Heading>
       <Grid columns={size !== 'small' ? 'small' : '100%'} gap="small">
-        {albums && <Albums albums={albums} />}
+        {albums ? <Albums albums={albums} /> : <Spinner />}
       </Grid>
     </div>
   )

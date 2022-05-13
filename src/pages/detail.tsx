@@ -1,3 +1,4 @@
+import { Spinner } from 'grommet'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -32,7 +33,7 @@ function DetailPage() {
     <>
       <BackButton />
       <h1>{album && album.name}</h1>
-      {album && <Tracks tracks={album.tracks.track} />}
+      {album ? <Tracks tracks={album.tracks.track} /> : <Spinner />}
     </>
   )
 }
