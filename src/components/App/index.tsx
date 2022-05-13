@@ -11,11 +11,7 @@ const Container = styled.main`
   }
 `
 
-type AppProps = {
-  children?: React.ReactNode
-}
-
-function App(props: AppProps) {
+function App(props: { children?: React.ReactNode }) {
   return <Container {...props} />
 }
 
