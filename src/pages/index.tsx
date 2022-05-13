@@ -6,9 +6,6 @@ import Heading from '../common/Heading'
 import AlbumCard from '../components/AlbumCard'
 
 function Albums({ albums }: { albums: Array<TopAlbum> }) {
-  // eslint-disable-next-line no-console
-  console.log('data', albums)
-
   return (
     <>
       {albums.map(({ name, image, mbid, url }) => (
@@ -31,7 +28,6 @@ function IndexPage() {
   useEffect(() => {
     async function fetchAlbums() {
       const response = await getTopAlbums()
-
       setAlbums(response.topalbums.album)
     }
 
@@ -39,12 +35,12 @@ function IndexPage() {
   }, [])
 
   return (
-    <div>
+    <>
       <Heading>Drake Top Albums</Heading>
       <Grid columns={size !== 'small' ? 'small' : '100%'} gap="small">
         {albums ? <Albums albums={albums} /> : <Spinner />}
       </Grid>
-    </div>
+    </>
   )
 }
 

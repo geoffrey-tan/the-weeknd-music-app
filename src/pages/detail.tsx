@@ -32,8 +32,14 @@ function DetailPage() {
   return (
     <>
       <BackButton />
-      <h1>{album && album.name}</h1>
-      {album ? <Tracks tracks={album.tracks.track} /> : <Spinner />}
+      {album ? (
+        <>
+          <h1>{album && album.name}</h1>
+          <Tracks tracks={album.tracks.track} />
+        </>
+      ) : (
+        <Spinner />
+      )}
     </>
   )
 }
