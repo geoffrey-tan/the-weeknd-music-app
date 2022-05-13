@@ -1,10 +1,10 @@
-import { Spinner } from 'grommet'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { Album, getAlbum, Track } from '../api/Albums'
 import BackButton from '../common/BackButton'
 import List, { Item } from '../common/List'
+import Loader from '../common/Loader'
 
 function Tracks({ tracks }: { tracks: Array<Track> }) {
   return (
@@ -38,7 +38,7 @@ function DetailPage() {
           <Tracks tracks={album.tracks.track} />
         </>
       ) : (
-        <Spinner />
+        <Loader />
       )}
     </>
   )
