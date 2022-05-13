@@ -7,12 +7,18 @@ import AlbumCard from '../components/AlbumCard'
 
 function Albums({ albums }: { albums: Array<TopAlbum> }) {
   // eslint-disable-next-line no-console
-  // console.log('data', albums)
+  console.log('data', albums)
 
   return (
     <>
-      {albums.map(({ name, image, mbid }) => (
-        <AlbumCard key={name} name={name} imageUrls={image} mbid={mbid} />
+      {albums.map(({ name, image, mbid, url }) => (
+        <AlbumCard
+          key={name}
+          name={name}
+          imageUrls={image}
+          mbid={mbid}
+          url={url}
+        />
       ))}
     </>
   )

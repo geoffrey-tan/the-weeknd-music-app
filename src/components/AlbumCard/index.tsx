@@ -4,15 +4,34 @@ import { Link } from 'react-router-dom'
 
 import { AlbumImage } from '../../api/Albums'
 
+function Anchor({
+  mbid,
+  url,
+  children,
+}: {
+  mbid: string
+  url: string
+  children: React.ReactNode
+}) {
+  return mbid ? (
+    <Link to={`album/${mbid}`}>{children}</Link>
+  ) : (
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  )
+}
+
 type AlbumCardProps = {
   name: string
   imageUrls: Array<AlbumImage>
   mbid: string
+  url: string
 }
 
-function AlbumCard({ name, imageUrls, mbid }: AlbumCardProps) {
+function AlbumCard({ name, imageUrls, mbid, url }: AlbumCardProps) {
   return (
-    <Link to={`album/${mbid}`}>
+    <Anchor mbid={mbid} url={url}>
       <Card height="small" width="medium" background="light-1">
         <Image fit="cover" src={imageUrls[3]['#text']} alt={name} />
         <CardHeader pad="medium">
@@ -22,7 +41,7 @@ function AlbumCard({ name, imageUrls, mbid }: AlbumCardProps) {
           <Button icon={<Favorite color="red" />} hoverIndicator />
         </CardFooter>
       </Card>
-    </Link>
+    </Anchor>
   )
 }
 

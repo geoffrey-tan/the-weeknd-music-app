@@ -27,6 +27,7 @@ type TopAlbum = {
   name: string
   image: Array<AlbumImage>
   mbid: string
+  url: string
 }
 
 const getAlbum = (mbid?: string) => client('album.getInfo', mbid)
