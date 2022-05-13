@@ -3,14 +3,15 @@ import { useParams } from 'react-router-dom'
 
 import { Album, getAlbum, Track } from '../api/Albums'
 import BackButton from '../common/BackButton'
+import List, { Item } from '../common/List'
 
 function Tracks({ tracks }: { tracks: Array<Track> }) {
   return (
-    <>
+    <List>
       {tracks.map(({ name, '@attr': { rank } }) => (
-        <div key={rank}>{name}</div>
+        <Item key={rank}>{name}</Item>
       ))}
-    </>
+    </List>
   )
 }
 
@@ -21,7 +22,6 @@ function DetailPage() {
   useEffect(() => {
     async function fetchAlbum() {
       const response = await getAlbum(mbid)
-
       setAlbum(response.album)
     }
 
@@ -29,15 +29,11 @@ function DetailPage() {
   }, [mbid])
 
   return (
-    <div>
+    <>
       <BackButton />
       <h1>{album && album.name}</h1>
-
       {album && <Tracks tracks={album.tracks.track} />}
-      {/* <ul>
-        <li>Track Name</li>
-      </ul> */}
-    </div>
+    </>
   )
 }
 
