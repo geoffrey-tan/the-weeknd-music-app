@@ -13,7 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Add `.env` file to root, with API key:
 
 ```
-API_KEY=<Last.fm API Key>
+REACT_APP_API_KEY=<Last.fm API Key>
 ```
 
 ```shell

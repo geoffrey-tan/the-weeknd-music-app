@@ -21,7 +21,7 @@
     "serve": "npx http-server build/",
     "serve:coverage": "npx http-server coverage/lcov-report/ -o",
     "test": "react-scripts test",
-    "test:coverage": "npm test -- --coverage",
+    "test:coverage": "CI=true npm test -- --coverage",
     "test:update": "npm run test:coverage -- -u || npm run serve:coverage",
     "typecheck": "tsc --noEmit",
     "update": "npx npm-check-updates --target minor --interactive && npm i",
